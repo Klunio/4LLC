@@ -1,0 +1,10 @@
+loguru==0.5.3
+APScheduler==3.7.0
+httpx==0.17.1
+pydantic==1.8.1
+cachetools==4.2.1
+SQLAlchemy==1.4.6
+fastapi==0.63.0
+asyncpg
+aiofiles~=0.6.0
+python-dateutil~=2.8.1

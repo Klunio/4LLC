@@ -1,0 +1,89 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: customer-landing
+  namespace: develop
+  annotations:
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
+    nginx.ingress.kubernetes.io/cors-max-age: "315360000"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: 11m
+spec:
+  tls:
+    - secretName: nadileaf-tls.v7
+  rules:
+    - host: 'customer-landing.nadileaf.com'
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name:
+                customer-landing
+              port:
+                number: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-landing
+  namespace: develop
+  labels:
+    app: customer-landing
+spec:
+  selector:
+    app.kubernetes.io/name: customer-landing
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http
+      targetPort: 8000
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-landing
+  namespace: develop
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: customer-landing
+      app.kubernetes.io/part-of: customer-landing
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: customer-landing
+        app.kubernetes.io/part-of: customer-landing
+    spec:
+      containers:
+        - name: customer-landing
+          image: 722740969534.dkr.ecr.cn-northwest-1.amazonaws.com.cn/customer-landing:v0.0.11
+          env:
+            - name: DEFAULT_PG_HOST
+              value: mesoor-develop.cupzbhodsxus.rds.cn-northwest-1.amazonaws.com.cn:5432
+            - name: DEFAULT_PG_USER
+              value: mesoor
+            - name: DEFAULT_PG_PASSWORD
+              value: R3v6IQP2pMvRHKiCYDsnIlBe0EkrjCRp!DXbsAi)7P6!lH#)q5
+            - name: DEFAULT_PG_DB
+              value: postgres
+
+            - name: DEFAULT_WT_URL
+              value: https://hook.worktile.com/project/incoming/bd5e890220c443c2ac8911d5f2a11502
+            - name: DEFAULT_WT_ASSIGNEE
+              value: yurizhang@mesoor.com;ericwang@mesoor.com
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "109868202947",
+    "project_id": "moonshot-ccfe7",
+    "storage_bucket": "moonshot-ccfe7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109868202947:android:6853d4093c1d6533645b76",
+        "android_client_info": {
+          "package_name": "com.dartmouth.moonshot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109868202947-rmjpormk5m85evb0llhqj1n2nepch85a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM9Ij4lN-aW8an0Z_FBg9DWEecE9xOXqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109868202947-rmjpormk5m85evb0llhqj1n2nepch85a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

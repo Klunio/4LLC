@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/customborder"
+        android:id="@+id/text_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/announce1" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/text_announcementt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Announcements Not Available"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/customborder"
+        android:id="@+id/text_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/chat" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/text_chatt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Chat Not Available"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/customborder"
+        android:id="@+id/text_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/face" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/text_facebookt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Facebook Not Available"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/customborder"
+        android:id="@+id/text_forum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/forum" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/text_forumt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Forum Not Available"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/customborder"
+        android:id="@+id/text_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/twit" />
+
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/text_twittert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Twitter Not Available"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Close" />
+
+</LinearLayout>
